@@ -10,10 +10,17 @@ import QrCode from './components/qr-code-gnerator/QrCode'
 import ChildTab from './components/custome-tab/ChildTab'
 import ParentTab from './components/custome-tab/ParentTab'
 import ParentModal from './components/model-popup/ParentModal'
+import ChiltToParent from './components/childtoparent/ChiltToParent'
 
 
 
 function App() {
+
+  const [UiColor, setUiColor] = useState(null)
+
+  const getColor = (color) => {
+    setUiColor(color)
+  }
 
   return (
     <>
@@ -31,12 +38,18 @@ function App() {
         {/* <ScrollIndicatore url={`https://dummyjson.com/products?limit=100`}/> */}
 
         {/* <LightDarkMode /> */}
-        
+
         {/* <QrCode /> */}
 
         {/* <ParentTab /> */}
 
         {/* <ParentModal /> */}
+
+        <div className='flex items-center justify-center mt-20'>
+          <div className='w-32 border border-slate-700 h-32' style={{ background: `${UiColor}` }}></div>
+        </div>
+
+        <ChiltToParent getColor={getColor} />
       </div>
     </>
   )
