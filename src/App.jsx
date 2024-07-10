@@ -14,6 +14,7 @@ import ChiltToParent from './components/childtoparent/ChiltToParent'
 import Rating from './components/star_rating/Rating'
 import Practise from './components/practrice/Practise'
 import Task from './components/task_manager/Task'
+import Debounsing from './components/debouncing/Debounsing'
 
 
 
@@ -49,7 +50,9 @@ function App() {
 
         {/* <ParentModal /> */}
 
-        <Task />
+        {/* <Task /> */}
+
+        <Debounsing/>
 
 
         {/* <div className='flex items-center justify-center mt-20'>
